@@ -4,6 +4,7 @@
 #include "test_init.h"
 #include "saxpy.h"
 
+#define TEST_TYPE "release"
 #define RUNS_PER_TESTCASE 30
 #define MAX_TESTCASES 3
 
@@ -58,14 +59,15 @@ int main() {
 
 		double total_elapsed_time = 0;
 
+		initialize_testcase(&tc, testcase_filenames[test]);
 		for (int iter = 0; iter < RUNS_PER_TESTCASE; iter++) {
-			initialize_testcase(&tc, testcase_filenames[test]);
 
 			double elapsed = time_implementation_assembly(tc);
 			total_elapsed_time += elapsed;
 
-			free_testcases(&tc);
+			flush_answer(tc);
 		}
+		free_testcases(&tc);
 
 		double average_runtime = total_elapsed_time / RUNS_PER_TESTCASE;
 		log_runtime("asm", ns[test], average_runtime);
@@ -115,8 +117,10 @@ void verify_correctness_assembly(struct testcase tc) {
 }
 
 void initialize_runtime_header() {
-	
-	FILE* file = fopen("data/average_runtime.csv", "a");
+	char filename[50] = "";
+	sprintf(filename, "data/average_runtime_%s.csv", TEST_TYPE);
+
+	FILE* file = fopen(filename, "a");
 
 	fprintf(file, "implementation,n,average_runtime_in_ms\n");
 
@@ -126,7 +130,7 @@ void initialize_runtime_header() {
 
 void log_runtime(char *implementation_type, int n, double average_runtime) {
 	char filename[50] = "";
-	sprintf(filename, "data/average_runtime.csv");
+	sprintf(filename, "data/average_runtime_%s.csv", TEST_TYPE);
 
 	FILE* file = fopen(filename, "a");
 	fprintf(file, "%s,%d,%.5f\n", implementation_type, n, average_runtime);

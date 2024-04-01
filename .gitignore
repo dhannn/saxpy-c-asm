@@ -363,3 +363,4 @@ MigrationBackup/
 FodyWeavers.xsd
 /saxpy-c-asm/.vscode
 **/testcase_*
+**/data/*.csv
