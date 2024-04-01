@@ -1,12 +1,15 @@
 section .data
 	SHADOW_SPACE_BUFF equ 32
-	some_float dd 1.0
+	some_float dq 761.7
+	FMT db "Z[%d] = %e", 10, 0
+	SPACING db 10, 0
 
 section .text 
 	bits 64
 	default rel
 
 global saxpy_asm
+extern printf
 
 ; n		RCX
 ; *Z	RDX
@@ -27,8 +30,6 @@ saxpy_asm:
 	; xmm7: A
 	; xmm8: X
 	; xmm9: Y
-
-	; cvtsd2ss		xmm2, xmm2
 	
 	mov			r15, [rbp + SHADOW_SPACE_BUFF]
 	traverse:
@@ -51,6 +52,32 @@ saxpy_asm:
 	addss		xmm6, xmm9 ; nice
 
 	movss		dword [rdx + rcx * 4], xmm6
+
+	mov			r15, 0
+	mov			r14, rdx
+	
+
+	call		print_spacing
+
+	traverse2:
+
+		sub			rsp, 8 * 5
+	
+		mov			rcx, FMT
+		mov			rdx, r15
+		movss		xmm6, [r14 + r15 * 4]
+		cvtss2sd	xmm6, xmm6
+		movsd		[some_float], xmm6
+		mov			r8,	[some_float]
+		call		printf
+
+		add			rsp, 8 * 5
+	
+		inc			r15
+		cmp			r15, 10
+		jne			traverse2
+
+	call		print_spacing
 	
 	pop		rbp
 	;pop		xmm8
@@ -58,4 +85,13 @@ saxpy_asm:
 	;pop		xmm6
 	pop		r15
 
+	ret
+
+	
+
+print_spacing:
+	sub			rsp, 8 * 5
+	mov			rcx, SPACING
+	call printf
+	add			rsp, 8 * 5
 	ret

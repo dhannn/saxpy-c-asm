@@ -131,6 +131,7 @@
     <ClCompile Include="main.c" />
     <ClCompile Include="saxpy.c" />
     <ClCompile Include="test_init.c" />
+    <ClCompile Include="utils.c" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="saxpy.asm">
@@ -144,6 +145,7 @@
     <None Include="testcase-generator\generator.py" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="utils.h" />
     <ClInclude Include="saxpy.h" />
     <ClInclude Include="test_init.h" />
   </ItemGroup>
