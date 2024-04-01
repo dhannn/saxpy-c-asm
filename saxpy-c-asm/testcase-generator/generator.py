@@ -1,21 +1,24 @@
 import random
+import struct
 
-for i in range(100):
+def generate_random_float():
+    return struct.unpack('f', random.randbytes(4))[0]
+
     
-    open(f'testcase_correctness', 'w').close()
-    file = open(f'testcase_correctness', 'a')
-    file.write('100\n')
+open(f'testcase_correctness', 'w').close()
+file = open(f'testcase_correctness', 'a')
+file.write('10\n')
 
-    a = round(random.random() * 2, 2)
-    file.write(f'{a}\n\n')
+a = generate_random_float()
+file.write(f'{a}\n\n')
 
-    for i in range(100):
-        x = round(random.random() * 2, 2)
-        y = round(random.random() * 2, 2)
-        z = round(a * x + y, 4)
-        file.write(f'{x}\n')
-        file.write(f'{y}\n')
-        file.write(f'{z}\n\n')
+for i in range(10):
+    x = generate_random_float()
+    y = generate_random_float()
+    z = a * x + y
+    file.write(f'{x}\n')
+    file.write(f'{y}\n')
+    file.write(f'{z}\n\n')
 
 ns = [(2, 20), (2, 24), (2, 28)]
 
@@ -27,13 +30,13 @@ for n_tuple in ns:
     
     file.write(f'{n}\n\n')
 
-    a = round(random.random() * 2, 2)
+    a = generate_random_float()
     file.write(f'{a}\n')
 
     for i in range(n):
-        x = round(random.random() * 2, 2)
-        y = round(random.random() * 2, 2)
-        z = round(a * x + y, 4)
+        x = generate_random_float()
+        y = generate_random_float()
+        z = a * x + y
         file.write(f'{x}\n')
         file.write(f'{y}\n')
         file.write(f'{z}\n\n')
