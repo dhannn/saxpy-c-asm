@@ -99,9 +99,11 @@ per kernel when executed on release mode. Much like the runtimes observed in
 debug mode, the assembly language implementation shows consistently better performance 
 than that of C's. <br>
 ![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/fb8a078b-4572-4c03-aad0-2fdb48c6240e)<br>
-![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/8a7fe745-ec95-4ceb-a5c3-b86981bd160e)
+![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/8a5c7cad-73e4-4e00-993d-06199c52044c)
 
 ## Comparing Debug and Release Mode
+![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/44cdfa0e-b840-4dbc-96b6-31e9e3dc060c) <br>
+![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/e0d601f9-3e0f-457e-9a84-d0ad24b26558)
 
 
 # Insights
