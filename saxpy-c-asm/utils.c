@@ -6,7 +6,7 @@
 
 extern void saxpy_asm(long long int n, long long int Z, float A, long long int X, long long int Y);
 
-#define TEST_TYPE "debug"
+#define TEST_TYPE "release"
 
 void log_correctness(struct testcase tc, char* implementation_type) {
 

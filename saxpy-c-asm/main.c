@@ -5,7 +5,6 @@
 #include "saxpy.h"
 #include "utils.h" 
 
-
 #define TEST_TYPE "release"
 #define RUNS_PER_TESTCASE 30
 #define MAX_TESTCASES 3
@@ -35,6 +34,7 @@ int main() {
 		for (int iter = 0; iter < RUNS_PER_TESTCASE; iter++) {
 			
 			double elapsed = time_implementation_c(tc);
+			display_first_n(10, tc.actual_Z);
 			total_elapsed_time += elapsed;
 
 			flush_answer(tc);
@@ -54,6 +54,7 @@ int main() {
 		for (int iter = 0; iter < RUNS_PER_TESTCASE; iter++) {
 
 			double elapsed = time_implementation_assembly(tc);
+			display_first_n(10, tc.actual_Z);
 			total_elapsed_time += elapsed;
 
 			flush_answer(tc);
