@@ -104,7 +104,7 @@ addition, the difference in execution time becomes much more apparent as the
 vector size increases. For instance, the gap between C and assembly's $2^{20}$ test cases is 
 0.0026 seconds while the gap between C and assembly's $2^{28}$ test cases is 0.4357 seconds.<br><br>
 ![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/800dc442-088f-40b0-b54b-9963faffc015)
-![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/9006c93b-a202-4826-85bf-580502dad844)<br>
+![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/80835f6d-436b-446d-bc37-1452edd92cfb)<br>
 ![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/8a5c7cad-73e4-4e00-993d-06199c52044c)
 
 ## Comparing Debug and Release Mode
