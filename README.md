@@ -82,7 +82,7 @@ Which experiment type has the worst performance? The best? What are the trends?
 The figures below show the average runtimes (in seconds) of each vector size 
 per kernel when executed on debug mode. It can be observed that the assembly 
 language implementation shows consistently better performance than that of C's. <br>
-![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/32821f3b-f669-4c1e-b79f-0efcba060ba3)
+![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/32821f3b-f669-4c1e-b79f-0efcba060ba3)<br>
 ![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/c17f5a87-664b-4d23-9c4c-91817df3a4f8)
 
 ## Release Mode
