@@ -23,11 +23,13 @@ and C implementations.
     1. <a href="#generating-test-cases">Generating Test Cases</a>
     1. <a href="#evaluation-of-performance">Evaluation of Performance</a>
 1. <a href="#proof-of-correctness">Proof of Correctness</a>
-1. <a href="#comparative-analysis-of-performance">Comparative Analysis of Performance</a>
+1. [Comparative Analysis of Performance](#comparative-analysis-of-performance)
+    1. <a href="#debug-mode">Debug Mode</a>
+    1. <a href="#release-mode">Release Mode</a>
+    1. <a href="#comparing-debug-and-release-mode">Comparing Debug and Release Mode</a>
 1. <a href="#insights">Insights</a>
 
 # Methodology
-
 ## SAXPY and Kernel Implementations
 
 For this experiment, we implemented a vector operation known mnemonically 
