@@ -7,7 +7,7 @@ as memory and processing power as programmers can choose which parts of the hard
 to utilize. Moreover, assembly language programs are generally faster than other programs 
 written in high-level language. 
 
-This experiment involves writing a kernel that performs the SAXPY (A*X + Y) function in 
+This experiment involves writing a kernel that performs the SAXPY ($AX + Y$) function in 
 (1) C program and (2) an x86-64 assembly. Using a main C program that calls both versions,
 we aim to compare their runtimes by getting the average of 30 executions each on both
 debug and release mode. From this, a short analysis of each kernel's performance will 
@@ -43,22 +43,22 @@ the correctness of the two implementation and b) measure the runtime.
 ## Generating Test Cases
 
 We created a Python script to automate the generation of random values for test cases. 
-This script generates random floats by utilizing the random.uniform() function and 
+This script generates random floats by utilizing the `random.uniform()` function and 
 rounds them to two decimal places. The generated floats are then used to calculate 
-corresponding values for the SAXPY operation (A*X + Y). These values are saved in .txt
-files named testcase_correctness and testcase_*, which the C program will later read 
+corresponding values for the SAXPY operation ($AX + Y$). These values are saved in .txt
+files named `testcase_correctness` and `testcase_*` which the C program will later read 
 for both correctness checking and performance evaluation.
 
-Specifically, we created test cases where the vector size (denoted by 'n') is raised 
+Specifically, we created test cases where the vector size (denoted by $n$) is 2 raised 
 to the power of 20, 24, and 28.
 
 
 ## Evaluation of Performance
 
 The performance of each kernel will be evaluated by running them 30 times for each 
-vector size: n^20, n^24, and n^28, in both debug and release modes. The program will
+vector size: $2^20$, $2^24$, and $2^28$, in both debug and release modes. The program will
 calculate the average runtime for each kernel and vector size, and save this information
-in a .csv file. Finally, we will compare the averages to see how the implementations 
+in a `.csv` file. Finally, we will compare the averages to see how the implementations 
 perform relative to each other.
 
 # Proof of Correctness
