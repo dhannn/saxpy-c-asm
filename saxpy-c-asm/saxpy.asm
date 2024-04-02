@@ -17,9 +17,6 @@ global saxpy_asm
 ; *Y	stack
 saxpy_asm:
 	push	r15
-	;push	xmm6
-	;push	xmm7
-	;push	xmm8
 	push	rbp
 	mov		rbp, rsp
 	add		rbp, 16
@@ -52,13 +49,7 @@ saxpy_asm:
 
 	movss		dword [rdx + rcx * 4], xmm6
 
-	mov			r15, 0
-	mov			r14, rdx
-	
 	pop		rbp
-	;pop		xmm8
-	;pop		xmm7
-	;pop		xmm6
 	pop		r15
 
 	ret
