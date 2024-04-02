@@ -55,7 +55,10 @@ to the power of 20, 24, and 28.
 
 ## Evaluation of Performance
 
-TODO: why yes
+The performance of each kernel will be evaluated by running them 30 times for each 
+vector size: n^20, n^24, and n^28, in both debug and release modes. Then, we will
+calculate the average runtime for each kernel and vector size. Finally, we will
+compare the averages to see how the implementations perform relative to each other.
 
 # Proof of Correctness
 
