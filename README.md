@@ -45,7 +45,7 @@ the correctness of the two implementation and b) measure the runtime.
 We created a Python script to automate the generation of random values for test cases. 
 This script generates random floats by utilizing the random.uniform() function and 
 rounds them to two decimal places. The generated floats are then used to calculate 
-corresponding values for the SAXPY operation (A*X + Y). These values are saved in 
+corresponding values for the SAXPY operation (A*X + Y). These values are saved in .txt
 files named testcase_correctness and testcase_*, which the C program will later read 
 for both correctness checking and performance evaluation.
 
