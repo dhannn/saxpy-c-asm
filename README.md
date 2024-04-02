@@ -1,4 +1,4 @@
-# Evaluating Performance of Assembly vs. C Programs
+![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/c0cc1fa6-dd72-477c-bbc1-5651e5d730ee)# Evaluating Performance of Assembly vs. C Programs
 
 Assembly language, although generally less practiced than higher level programming 
 languages like C and Java, is quite useful as it allows programmers to have direct
@@ -56,9 +56,10 @@ to the power of 20, 24, and 28.
 ## Evaluation of Performance
 
 The performance of each kernel will be evaluated by running them 30 times for each 
-vector size: n^20, n^24, and n^28, in both debug and release modes. Then, we will
-calculate the average runtime for each kernel and vector size. Finally, we will
-compare the averages to see how the implementations perform relative to each other.
+vector size: n^20, n^24, and n^28, in both debug and release modes. The program will
+calculate the average runtime for each kernel and vector size, and save this information
+in a .csv file. Finally, we will compare the averages to see how the implementations 
+perform relative to each other.
 
 # Proof of Correctness
 
@@ -78,8 +79,10 @@ TODO: Describe the table/csv. What are the average runtimes for each experiment?
 Which experiment type has the worst performance? The best? What are the trends?
 
 ## Debug Mode
-![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/837a0f23-d7e0-43e1-bfc3-050745086fce)
-![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/40708821-f72f-4e7a-bd16-198fc3dced94)
+![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/32821f3b-f669-4c1e-b79f-0efcba060ba3)<br>
+![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/c17f5a87-664b-4d23-9c4c-91817df3a4f8)
+
+
 
 ## Release Mode
 
