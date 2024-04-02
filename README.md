@@ -111,8 +111,8 @@ vector size increases. For instance, the gap between C and assembly's $2^{20}$ t
 The figures below compare the average runtime (in seconds) with regards to their execution
 mode. Aside from the C implementation's $2^{28}$ test cases, it can be observed that every other
 case shows runs on Release Mode outperforming those on Debug Mode by a small margin. This can be 
-noted as Release Mode's average runtime of 0.15681 seconds. is less than Debug Mode's 0.162631667 seconds.<br><br>
-![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/44cdfa0e-b840-4dbc-96b6-31e9e3dc060c) <br>
+noted as Release Mode's average runtime of 0.1568 seconds. is less than Debug Mode's 0.1626 seconds.<br><br>
+![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/15aa0d19-4924-41b4-b4bf-4a89a5e79dcb)<br>
 ![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/e0d601f9-3e0f-457e-9a84-d0ad24b26558)
 
 # Insights
