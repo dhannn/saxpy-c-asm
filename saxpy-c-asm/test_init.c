@@ -1,16 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "test_init.h"
 
 #pragma warning(disable : 4996)
-
-struct testcase {
-	int n;
-	double A;
-	float* X;
-	float* Y;
-	float* expected_Z;
-	float* actual_Z;
-};
 
 /**
  * @brief Initializes a testcase from a file.
