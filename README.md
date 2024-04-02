@@ -38,7 +38,7 @@ We implemented the kernel implementation of SAXPY both in assembly
 (in `saxpy.asm`) and in C (in `saxpy.c` with its corresponding header file).
 
 The C file `main.c` acts as a driver that calls necessary functions to a) verify
-the correctness of the two implementation and b) measure the runtime.
+the correctness of the two implementations and b) measure the runtime.
 
 ## Generating Test Cases
 
@@ -77,6 +77,10 @@ displayed in each implementation type's respective .csv file.
 ![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/0c59ff43-114d-41d2-b469-aa2c6a85e266)
 
 # Comparative Analysis of Performance
+As previously mentioned, we have decided to set the test cases to vector sizes $2^{20}$, 
+$2^{24}$, and $2^{28}$. We conducted a comparative analysis specifically on the runtimes 
+of (1) C and Assembly program implementations, and (2) Release and Debug mode.
+
 ## Debug Mode
 The figures below show the average runtimes (in seconds) of each vector size 
 per kernel when executed on debug mode. It can be observed that the assembly 
@@ -84,7 +88,7 @@ language implementation with an average runtime of 0.09122 seconds shows consist
 better performance than that of C's average runtime of 0.234043333 seconds.
 Moreover, the difference in execution time becomes much more apparent as the vector 
 size increases. For instance, the gap between C and assembly's $2^{20}$ test cases is 
-0.00177 seconds while the gap between C and assembly's $2^{28}$ test cases is 0.405 seconds.<br>
+0.00177 seconds while the gap between C and assembly's $2^{28}$ test cases is 0.405 seconds.<br><br>
 ![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/32821f3b-f669-4c1e-b79f-0efcba060ba3)
 ![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/0622b397-ba3a-4138-85d5-3f3f8b9c4ab3)<br>
 ![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/7eb98ec0-716a-4996-9193-4d41c9910931)
@@ -96,7 +100,7 @@ debug mode,  the assembly language implementation with an average runtime of 0.0
 shows consistently better performance than that of C's average runtime of 0.23441 seconds. In
 addition, the difference in execution time becomes much more apparent as the
 vector size increases. For instance, the gap between C and assembly's $2^{20}$ test cases is 
-0.00263 seconds while the gap between C and assembly's $2^{28}$ test cases is 0.4357 seconds.<br>
+0.00263 seconds while the gap between C and assembly's $2^{28}$ test cases is 0.4357 seconds.<br><br>
 ![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/fb8a078b-4572-4c03-aad0-2fdb48c6240e)
 ![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/bd2604b7-3649-47ff-92c6-7ce868297152)<br>
 ![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/8a5c7cad-73e4-4e00-993d-06199c52044c)
@@ -105,7 +109,7 @@ vector size increases. For instance, the gap between C and assembly's $2^{20}$ t
 The figures below compare the average runtime (in seconds) with regards to their execution
 mode. Aside from the C implementation's $2^{28}$ test cases, it can be observed that every other
 case shows runs on Release Mode outperforming those on Debug Mode by a small margin. This can be 
-noted as Release Mode's average runtime of 0.15681 seconds. is less than Debug Mode's 0.162631667 seconds.
+noted as Release Mode's average runtime of 0.15681 seconds. is less than Debug Mode's 0.162631667 seconds.<br><br>
 ![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/44cdfa0e-b840-4dbc-96b6-31e9e3dc060c) <br>
 ![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/e0d601f9-3e0f-457e-9a84-d0ad24b26558)
 
