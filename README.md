@@ -114,6 +114,9 @@ noted as Release Mode's average runtime of 0.15681 seconds. is less than Debug M
 ![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/e0d601f9-3e0f-457e-9a84-d0ad24b26558)
 
 # Insights
-
-TODO: Tie everything together. What insights can we gleam from this short 
-experiment? Make sure to bring back the things we've mentioned in the intro
+Overall, it can be observed that in this experiment, Assembly outperforms C. At first glance, this
+may seem confusing since the Assembly source code is significantly longer than that of C's. However,
+it is important to remember the characteristics of Assembly language. As opposed to high-level
+programming languages like C, assembly does not require an intermediary like a compiler. Unlike C, 
+assembly directly represents machine instructions, reducing the overhead of translation, and
+ultimately, resulting in faster runtimes.
