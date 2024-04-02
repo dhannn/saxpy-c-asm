@@ -63,11 +63,18 @@ perform relative to each other.
 
 # Proof of Correctness
 
-TODO: Show the standard output and the file input
+To validate the correctness of the SAXPY function implemented in both C and assembly, 
+we generated 10 test cases, and stored their results, both actual and expected, in a .csv 
+file. If all tests pass successfully, the program proceeds to the main experiment, where 
+the SAXPY function is tested on vector sizes $2^{20}$, $2^{24}$, and $2^{28}$. This ensures 
+that both implementations perform as expected before evaluating their performance.
 
-TODO: Explain briefly that the standard output that prints the first ten values
-of Z in the kernel is equal to the expected output file input showed in the file
-input
+The standard output prints the first ten values of Z in the terminal. If the program is 
+implemented correctly, we can expect that these values are equal to the expected results
+displayed in the .csv file.
+
+![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/d2613fe8-32e3-40f2-b021-8b7e82ba93b9)
+![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/8c6efd22-baa5-49d2-9ff9-d3fb41669b29)
 
 # Comparative Analysis of Performance
 
