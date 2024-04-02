@@ -1,4 +1,4 @@
-# Evaluating Performance of Assembly vs. C Programs
+![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/b1ff0908-d05e-42a3-8761-07d59dd79a5e)# Evaluating Performance of Assembly vs. C Programs
 
 Assembly language, although generally less practiced than higher level programming 
 languages like C and Java, is quite useful as it allows programmers to have direct
@@ -104,7 +104,7 @@ addition, the difference in execution time becomes much more apparent as the
 vector size increases. For instance, the gap between C and assembly's $2^{20}$ test cases is 
 0.0026 seconds while the gap between C and assembly's $2^{28}$ test cases is 0.4357 seconds.<br><br>
 ![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/800dc442-088f-40b0-b54b-9963faffc015)
-![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/f7ca5b6b-3388-4f1f-bc72-67ff3b014671)<br>
+![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/0d99a74e-31b2-481f-9eba-3fa2245ea5fe)<br>
 ![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/8a5c7cad-73e4-4e00-993d-06199c52044c)
 
 ## Comparing Debug and Release Mode
