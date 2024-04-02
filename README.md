@@ -90,7 +90,7 @@ language implementation with an average runtime of 0.0912 seconds shows consiste
 better performance than that of C's average runtime of 0.2340 seconds.
 Moreover, the difference in execution time becomes much more apparent as the vector 
 size increases. For instance, the gap between C and assembly's $2^{20}$ test cases is 
-0.00177 seconds while the gap between C and assembly's $2^{28}$ test cases is 0.405 seconds.<br><br>
+0.0018 seconds while the gap between C and assembly's $2^{28}$ test cases is 0.4023 seconds.<br><br>
 ![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/0f85e73e-c161-4bd4-ad5b-8421fd07dc5f)
 ![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/5d6f01e0-87f5-450d-b9c7-3ce8cf652821)<br>
 ![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/7eb98ec0-716a-4996-9193-4d41c9910931)
@@ -102,17 +102,17 @@ debug mode,  the assembly language implementation with an average runtime of 0.0
 shows consistently better performance than that of C's average runtime of 0.234 seconds. In
 addition, the difference in execution time becomes much more apparent as the
 vector size increases. For instance, the gap between C and assembly's $2^{20}$ test cases is 
-0.00263 seconds while the gap between C and assembly's $2^{28}$ test cases is 0.4357 seconds.<br><br>
+0.0026 seconds while the gap between C and assembly's $2^{28}$ test cases is 0.4357 seconds.<br><br>
 ![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/800dc442-088f-40b0-b54b-9963faffc015)
-![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/9006c93b-a202-4826-85bf-580502dad844)<br>
+![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/80835f6d-436b-446d-bc37-1452edd92cfb)<br>
 ![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/8a5c7cad-73e4-4e00-993d-06199c52044c)
 
 ## Comparing Debug and Release Mode
 The figures below compare the average runtime (in seconds) with regards to their execution
 mode. Aside from the C implementation's $2^{28}$ test cases, it can be observed that every other
 case shows runs on Release Mode outperforming those on Debug Mode by a small margin. This can be 
-noted as Release Mode's average runtime of 0.15681 seconds. is less than Debug Mode's 0.162631667 seconds.<br><br>
-![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/44cdfa0e-b840-4dbc-96b6-31e9e3dc060c) <br>
+noted as Release Mode's average runtime of 0.1568 seconds. is less than Debug Mode's 0.1626 seconds.<br><br>
+![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/15aa0d19-4924-41b4-b4bf-4a89a5e79dcb)<br>
 ![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/e0d601f9-3e0f-457e-9a84-d0ad24b26558)
 
 # Insights
