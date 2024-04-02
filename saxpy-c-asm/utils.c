@@ -8,6 +8,16 @@ extern void saxpy_asm(long long int n, long long int Z, float A, long long int X
 
 #define TEST_TYPE "release"
 
+void verify_correctness_c(struct testcase tc) {
+	saxpy_c(tc.n, tc.actual_Z, tc.A, tc.X, tc.Y);
+	log_correctness(tc, "C");
+}
+
+void verify_correctness_assembly(struct testcase tc) {
+	saxpy_asm((long long int) tc.n, (long long int) tc.actual_Z, (float)tc.A, (long long int) tc.X, (long long int) tc.Y);
+	log_correctness(tc, "assembly");
+}
+
 void log_correctness(struct testcase tc, char* implementation_type) {
 
 	char filename[50] = "";
@@ -34,37 +44,6 @@ void log_correctness(struct testcase tc, char* implementation_type) {
 		fprintf(file, "%.2f,%.2f,%.2f,%.4f,%.4f,%s\n", A, X, Y, expected, actual, status);
 	}
 
-	fclose(file);
-}
-
-void verify_correctness_c(struct testcase tc) {
-	saxpy_c(tc.n, tc.actual_Z, tc.A, tc.X, tc.Y);
-	log_correctness(tc, "C");
-}
-
-void verify_correctness_assembly(struct testcase tc) {
-	saxpy_asm((long long int) tc.n, (long long int) tc.actual_Z, (float)tc.A, (long long int) tc.X, (long long int) tc.Y);
-	log_correctness(tc, "assembly");
-}
-
-void initialize_runtime_header() {
-	char filename[50] = "";
-	sprintf(filename, "data/average_runtime_%s.csv", TEST_TYPE);
-
-	FILE* file = fopen(filename, "a");
-
-	fprintf(file, "implementation,n,average_runtime_in_ms\n");
-
-	fclose(file);
-
-}
-
-void log_runtime(char* implementation_type, int n, double average_runtime) {
-	char filename[50] = "";
-	sprintf(filename, "data/average_runtime_%s.csv", TEST_TYPE);
-
-	FILE* file = fopen(filename, "a");
-	fprintf(file, "%s,%d,%.5f\n", implementation_type, n, average_runtime);
 	fclose(file);
 }
 
@@ -98,6 +77,30 @@ double time_implementation_assembly(struct testcase tc) {
 	return (double)(after - before) / CLOCKS_PER_SEC;
 
 }
+
+void initialize_runtime_header() {
+
+	char filename[50] = "";
+	sprintf(filename, "data/average_runtime_%s.csv", TEST_TYPE);
+
+	FILE* file = fopen(filename, "a");
+
+	fprintf(file, "implementation,n,average_runtime_in_ms\n");
+
+	fclose(file);
+
+}
+
+void log_runtime(char* implementation_type, int n, double average_runtime) {
+
+	char filename[50] = "";
+	sprintf(filename, "data/average_runtime_%s.csv", TEST_TYPE);
+
+	FILE* file = fopen(filename, "a");
+	fprintf(file, "%s,%d,%.5f\n", implementation_type, n, average_runtime);
+	fclose(file);
+}
+
 
 void display_first_n(int n, float* Z) {
 	printf("\n");

@@ -10,3 +10,4 @@ void initialize_runtime_header();
 void log_runtime(char*, int, double);
 
 void display_first_n(int, float*);
+
