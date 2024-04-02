@@ -1,4 +1,4 @@
-![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/124fdea8-6068-462c-aff3-3fdb4b47f57a)# Evaluating Performance of Assembly vs. C Programs
+# Evaluating Performance of Assembly vs. C Programs
 
 Assembly language, although generally less practiced than higher level programming 
 languages like C and Java, is quite useful as it allows programmers to have direct
@@ -98,7 +98,7 @@ The figures below show the average runtimes (in seconds) of each vector size
 per kernel when executed on release mode. Much like the runtimes observed in
 debug mode, the assembly language implementation shows consistently better performance 
 than that of C's. <br>
-![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/fb8a078b-4572-4c03-aad0-2fdb48c6240e)
+![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/fb8a078b-4572-4c03-aad0-2fdb48c6240e)<br>
 ![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/8a7fe745-ec95-4ceb-a5c3-b86981bd160e)
 
 ## Comparing Debug and Release Mode
