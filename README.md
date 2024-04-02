@@ -79,7 +79,7 @@ displayed in each implementation type's respective .csv file.
 # Comparative Analysis of Performance
 As previously mentioned, we have decided to set the test cases to vector sizes $2^{20}$, 
 $2^{24}$, and $2^{28}$. We conducted a comparative analysis specifically on the runtimes 
-of (1) C and Assembly program implementations, and (2) Release and Debug mode.
+of (1) C and assembly program implementations, and (2) Release and Debug mode.
 
 ## Debug Mode
 The figures below show the average runtimes (in seconds) of each vector size 
@@ -114,9 +114,9 @@ noted as Release Mode's average runtime of 0.15681 seconds. is less than Debug M
 ![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/e0d601f9-3e0f-457e-9a84-d0ad24b26558)
 
 # Insights
-Overall, it can be observed that in this experiment, **Assembly outperforms C**. At first glance, this
-may seem confusing since the Assembly source code is significantly longer than that of C's. However,
-it is important to remember the characteristics of Assembly language. As opposed to high-level
+Overall, it can be observed that in this experiment, **assembly outperforms C**. At first glance, this
+may seem confusing since the assembly source code is significantly longer than that of C's. However,
+it is important to remember the characteristics of assembly language. As opposed to high-level
 programming languages like C, assembly does not require an intermediary like a compiler. Unlike C, 
 assembly directly represents machine instructions, reducing the overhead of translation, and
 ultimately, resulting in faster runtimes.
