@@ -1,4 +1,4 @@
-![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/b1ff0908-d05e-42a3-8761-07d59dd79a5e)# Evaluating Performance of Assembly vs. C Programs
+# Evaluating Performance of Assembly vs. C Programs
 
 Assembly language, although generally less practiced than higher level programming 
 languages like C and Java, is quite useful as it allows programmers to have direct
@@ -135,3 +135,16 @@ It is important to note that although the differences in average runtime are qui
 this experiment, it is expected that with larger data, the performance gap between assembly 
 and other high-level programming language will become more apparent. This allows us to further 
 appreciate the wonders of assembly.
+
+---
+
+# Declaration of AI Use
+In accordance with the directives of the Provost, which encourages the transparent use of AI technology 
+to enhance projects, we hereby declare that we use AI technology to augment this hands-on activity. The 
+following use cases illustrate our application of AI:
+
+- Generation of code documentation: to minimize the tedious process of documenting code, we use AI to
+document our original code for us. 
+
+We guarantee that all aspects of the project beyond the aforementioned scope are entirely original and 
+free from external influence.
