@@ -144,7 +144,10 @@ to enhance projects, we hereby declare that we use AI technology to augment this
 following use cases illustrate our application of AI:
 
 - Generation of code documentation: to minimize the tedious process of documenting code, we use AI to
-document our original code for us. 
+document our original code for us.
+
+For transparency, the following link shows the scope of AI use: 
+[https://chat.openai.com/share/e4280f73-f1e0-4b0c-8364-14c439203b95](https://chat.openai.com/share/a547e9df-639b-4c6d-80f4-9066bf3ee802).
 
 We guarantee that all aspects of the project beyond the aforementioned scope are entirely original and 
 free from external influence.
