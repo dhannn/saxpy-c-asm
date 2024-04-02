@@ -129,5 +129,7 @@ during development. However, in release mode, these extras are removed to improv
 resulting in faster execution of the program. Therefore, while debug mode is useful for debugging, 
 release mode is faster for running the program without these extra checks.
 
-It is important to note that although the differences in average runtime are small here, they 
-would be more noticeable with larger data. This allows us to further appreciate the wonders of assembly.
+It is important to note that although the differences in average runtime are quite small in 
+this experiment, it is expected that with larger data, the performance gap between assembly 
+and other high-level programming language will become more apparent. This allows us to further 
+appreciate the wonders of assembly.
