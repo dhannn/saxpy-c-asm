@@ -73,7 +73,7 @@ The standard output prints the first ten values of Z in the terminal. If the pro
 implemented correctly, we can expect that these values are equal to the expected results
 displayed in the .csv file.
 
-![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/d2613fe8-32e3-40f2-b021-8b7e82ba93b9)
+![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/0022da55-de5c-447d-abaa-9f5af571cda0)
 ![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/0c59ff43-114d-41d2-b469-aa2c6a85e266)
 
 
