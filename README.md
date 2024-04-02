@@ -1,4 +1,6 @@
-![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/c0cc1fa6-dd72-477c-bbc1-5651e5d730ee)# Evaluating Performance of Assembly vs. C Programs
+![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/c0cc1fa6-dd72-477c-bbc1-5651e5d730ee)
+
+# Evaluating Performance of Assembly vs. C Programs
 
 Assembly language, although generally less practiced than higher level programming 
 languages like C and Java, is quite useful as it allows programmers to have direct
