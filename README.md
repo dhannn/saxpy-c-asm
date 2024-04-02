@@ -74,7 +74,8 @@ implemented correctly, we can expect that these values are equal to the expected
 displayed in the .csv file.
 
 ![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/d2613fe8-32e3-40f2-b021-8b7e82ba93b9)
-![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/7eb98ec0-716a-4996-9193-4d41c9910931)
+![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/0c59ff43-114d-41d2-b469-aa2c6a85e266)
+
 
 # Comparative Analysis of Performance
 
@@ -90,7 +91,7 @@ The figures below show the average runtimes (in seconds) of each vector size
 per kernel when executed on debug mode. It can be observed that the assembly 
 language implementation shows consistently better performance than that of C's. <br>
 ![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/32821f3b-f669-4c1e-b79f-0efcba060ba3)<br>
-![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/c17f5a87-664b-4d23-9c4c-91817df3a4f8)
+![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/7eb98ec0-716a-4996-9193-4d41c9910931)
 
 ## Release Mode
 
