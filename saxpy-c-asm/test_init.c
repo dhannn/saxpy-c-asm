@@ -12,6 +12,12 @@ struct testcase {
 	float* actual_Z;
 };
 
+/**
+ * @brief Initializes a testcase from a file.
+ * 
+ * @param tc Pointer to the testcase struct to be initialized.
+ * @param testcase_filename Name of the file containing the testcase data.
+ */
 void initialize_testcase(struct testcase *tc, char *testcase_filename) {
 	printf("Initializing testcase from file %s...\n", testcase_filename);
 
@@ -36,12 +42,22 @@ void initialize_testcase(struct testcase *tc, char *testcase_filename) {
 	fclose(file);
 }
 
+/**
+ * @brief Resets the actual output data of a testcase.
+ * 
+ * @param tc The testcase struct whose actual output data will be reset.
+ */
 void flush_answer(struct testcase tc) {
 	for (int i = 0; i < tc.n; i++) {
 		(tc.actual_Z)[i] = 0.0f;
 	}
 }
 
+/**
+ * @brief Frees memory allocated for testcase data.
+ * 
+ * @param tc Pointer to the testcase struct whose memory will be freed.
+ */
 void free_testcases(struct testcase *tc) {
 	free(tc->X);
 	free(tc->Y);
