@@ -77,6 +77,15 @@ make a graph out of the CSV HAHA)
 TODO: Describe the table/csv. What are the average runtimes for each experiment? 
 Which experiment type has the worst performance? The best? What are the trends?
 
+## Debug Mode
+![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/837a0f23-d7e0-43e1-bfc3-050745086fce)
+![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/40708821-f72f-4e7a-bd16-198fc3dced94)
+
+## Release Mode
+
+## Comparing Debug and Release Mode
+
+
 # Insights
 
 TODO: Tie everything together. What insights can we gleam from this short 
