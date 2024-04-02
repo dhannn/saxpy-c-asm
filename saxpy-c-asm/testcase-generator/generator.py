@@ -1,15 +1,31 @@
+"""
+Script for generating test cases for correctness and performance testing.
+"""
 import random
-import struct
-from math import sqrt
 
 def generate_random_float(n=10):
+    """
+    Generates a random floating-point number within the range [-n, n].
+
+    Parameters:
+        n (int): The range limit.
+
+    Returns:
+        float: Random floating-point number.
+    """
     return round(random.uniform(-n, n), 2)
-    
-# def generate_random_float():
-#     x = random.randbytes(4)
-#     return struct.unpack('f', x)[0]
 
 def generate_random_xyz(n, a):
+    """
+    Generates random values for X, Y, and calculates Z based on A*X + Y.
+
+    Parameters:
+        n (int): The range limit for generating X and Y.
+        a (float): The constant A.
+
+    Returns:
+        tuple: (X, Y, Z) values.
+    """
     x = random.uniform(-n, n)
     x = round(x, 2)
 
@@ -21,23 +37,8 @@ def generate_random_xyz(n, a):
 
     return x, y, z
 
-# def generate_random_xyz(a):
-#     while True:
-#         try:
-#             x_b, x = generate_random_float()
-#             y_b, y = generate_random_float()
-#             z = a * x + y
-#             z = round(z, 4)
-#             z_b = struct.pack('>f', z)
-#         except OverflowError:
-#             print('Retrying')
-#             continue
 
-#         break
-
-#     return x_b, y_b, z_b
-
-    
+# Generate test cases for correctness    
 open(f'testcase_correctness', 'w').close()
 file = open(f'testcase_correctness', 'a')
 file.write('10\n')
@@ -53,6 +54,8 @@ for i in range(10):
 
 file.close()
 
+
+# Generate test cases for performance
 ns = [(2, 20), (2, 24), (2, 28)]
 
 for n_tuple in ns:
@@ -67,7 +70,6 @@ for n_tuple in ns:
     file.write(f'{a}\n\n')
 
     for i in range(n):
-        # print(f'printing {i}')
         x, y, z = generate_random_xyz(1, a)
         file.write(f'{x}\n')
         file.write(f'{y}\n')
