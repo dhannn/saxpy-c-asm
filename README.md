@@ -23,11 +23,13 @@ and C implementations.
     1. <a href="#generating-test-cases">Generating Test Cases</a>
     1. <a href="#evaluation-of-performance">Evaluation of Performance</a>
 1. <a href="#proof-of-correctness">Proof of Correctness</a>
-1. <a href="#comparative-analysis-of-performance">Comparative Analysis of Performance</a>
+1. [Comparative Analysis of Performance](#comparative-analysis-of-performance)
+    1. <a href="#debug-mode">Debug Mode</a>
+    1. <a href="#release-mode">Release Mode</a>
+    1. <a href="#comparing-debug-and-release-mode">Comparing Debug and Release Mode</a>
 1. <a href="#insights">Insights</a>
 
 # Methodology
-
 ## SAXPY and Kernel Implementations
 
 For this experiment, we implemented a vector operation known mnemonically 
@@ -79,7 +81,7 @@ displayed in each implementation type's respective .csv file.
 # Comparative Analysis of Performance
 As previously mentioned, we have decided to set the test cases to vector sizes $2^{20}$, 
 $2^{24}$, and $2^{28}$. We conducted a comparative analysis specifically on the runtimes 
-of (1) C and Assembly program implementations, and (2) Release and Debug mode.
+of (1) C and assembly program implementations, and (2) Release and Debug mode.
 
 ## Debug Mode
 The figures below show the average runtimes (in seconds) of each vector size 
@@ -90,7 +92,7 @@ Moreover, the difference in execution time becomes much more apparent as the vec
 size increases. For instance, the gap between C and assembly's $2^{20}$ test cases is 
 0.00177 seconds while the gap between C and assembly's $2^{28}$ test cases is 0.405 seconds.<br><br>
 ![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/32821f3b-f669-4c1e-b79f-0efcba060ba3)
-![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/0622b397-ba3a-4138-85d5-3f3f8b9c4ab3)<br>
+![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/bc0011fc-4c30-4867-9211-7ca29dfa3ec2)<br>
 ![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/7eb98ec0-716a-4996-9193-4d41c9910931)
 
 ## Release Mode
@@ -102,7 +104,7 @@ addition, the difference in execution time becomes much more apparent as the
 vector size increases. For instance, the gap between C and assembly's $2^{20}$ test cases is 
 0.00263 seconds while the gap between C and assembly's $2^{28}$ test cases is 0.4357 seconds.<br><br>
 ![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/fb8a078b-4572-4c03-aad0-2fdb48c6240e)
-![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/bd2604b7-3649-47ff-92c6-7ce868297152)<br>
+![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/3cff998b-5acf-4e42-8462-d0e3181ecd7d)<br>
 ![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/8a5c7cad-73e4-4e00-993d-06199c52044c)
 
 ## Comparing Debug and Release Mode
@@ -114,6 +116,22 @@ noted as Release Mode's average runtime of 0.15681 seconds. is less than Debug M
 ![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/e0d601f9-3e0f-457e-9a84-d0ad24b26558)
 
 # Insights
+Overall, it can be observed that in this experiment, **assembly outperforms C**. At first glance, this
+may seem confusing since the assembly source code is significantly longer than that of C's. However,
+it is important to remember the characteristics of assembly language. As opposed to high-level
+programming languages like C, assembly does not require an intermediary like a compiler. Unlike C, 
+assembly directly represents machine instructions, reducing the overhead of translation, and
+ultimately, resulting in faster runtimes.
 
-TODO: Tie everything together. What insights can we gleam from this short 
-experiment? Make sure to bring back the things we've mentioned in the intro
+On the other hand, **running the program on Release Mode generally results in faster execution 
+times than on Debug Mode** due to the absence of additional checks. In debug mode, the 
+compiler adds extra checks and information to help with debugging, which makes the program 
+slower to run. These checks and information are helpful for finding and fixing bugs 
+during development. However, in release mode, these extras are removed to improve performance, 
+resulting in faster execution of the program. Therefore, while debug mode is useful for debugging, 
+release mode is faster for running the program without these extra checks.
+
+It is important to note that although the differences in average runtime are quite small in 
+this experiment, it is expected that with larger data, the performance gap between assembly 
+and other high-level programming language will become more apparent. This allows us to further 
+appreciate the wonders of assembly.
