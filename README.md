@@ -56,7 +56,7 @@ to the power of 20, 24, and 28.
 ## Evaluation of Performance
 
 The performance of each kernel will be evaluated by running them 30 times for each 
-vector size: $2^20$, $2^24$, and $2^28$, in both debug and release modes. The program will
+vector size: $2^{20}$, $2^{24}$, and $2^{28}$, in both debug and release modes. The program will
 calculate the average runtime for each kernel and vector size, and save this information
 in a `.csv` file. Finally, we will compare the averages to see how the implementations 
 perform relative to each other.
@@ -74,7 +74,7 @@ implemented correctly, we can expect that these values are equal to the expected
 displayed in the .csv file.
 
 ![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/d2613fe8-32e3-40f2-b021-8b7e82ba93b9)
-![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/8c6efd22-baa5-49d2-9ff9-d3fb41669b29)
+![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/7eb98ec0-716a-4996-9193-4d41c9910931)
 
 # Comparative Analysis of Performance
 
