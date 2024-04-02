@@ -80,21 +80,25 @@ displayed in each implementation type's respective .csv file.
 ## Debug Mode
 The figures below show the average runtimes (in seconds) of each vector size 
 per kernel when executed on debug mode. It can be observed that the assembly 
-language implementation shows consistently better performance than that of C's. 
+language implementation with an average runtime of 0.09122 seconds shows consistently 
+better performance than that of C's average runtime of 0.234043333 seconds.
 Moreover, the difference in execution time becomes much more apparent as the vector 
 size increases. For instance, the gap between C and assembly's $2^{20}$ test cases is 
 0.00177 seconds while the gap between C and assembly's $2^{28}$ test cases is 0.405 seconds.<br>
-![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/32821f3b-f669-4c1e-b79f-0efcba060ba3)<br>
+![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/32821f3b-f669-4c1e-b79f-0efcba060ba3)
+![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/9befd008-21d5-4141-a4bb-b6bc55e64e28)<br>
 ![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/7eb98ec0-716a-4996-9193-4d41c9910931)
 
 ## Release Mode
 The figures below show the average runtime (in seconds) of each vector size 
 per kernel when executed on release mode. Much like the runtimes observed in
-debug mode, the assembly language implementation shows consistently better performance 
-than that of C's, and the difference in execution time becomes much more apparent as the
+debug mode,  the assembly language implementation with an average runtime of 0.07921 seconds 
+shows consistently better performance than that of C's average runtime of 0.23441 seconds. In
+addition, the difference in execution time becomes much more apparent as the
 vector size increases. For instance, the gap between C and assembly's $2^{20}$ test cases is 
 0.00263 seconds while the gap between C and assembly's $2^{28}$ test cases is 0.4357 seconds.<br>
-![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/fb8a078b-4572-4c03-aad0-2fdb48c6240e)<br>
+![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/fb8a078b-4572-4c03-aad0-2fdb48c6240e)
+![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/26107036-81ea-4521-bb24-c5b1a7a8d1a1)<br>
 ![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/8a5c7cad-73e4-4e00-993d-06199c52044c)
 
 ## Comparing Debug and Release Mode
