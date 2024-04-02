@@ -8,16 +8,32 @@ extern void saxpy_asm(long long int n, long long int Z, float A, long long int X
 
 #define TEST_TYPE "release"
 
+/**
+ * @brief Verifies the correctness of the C implementation of SAXPY.
+ * 
+ * @param tc The testcase struct containing input data.
+ */
 void verify_correctness_c(struct testcase tc) {
 	saxpy_c(tc.n, tc.actual_Z, tc.A, tc.X, tc.Y);
 	log_correctness(tc, "C");
 }
 
+/**
+ * @brief Verifies the correctness of the assembly implementation of SAXPY.
+ * 
+ * @param tc The testcase struct containing input data.
+ */
 void verify_correctness_assembly(struct testcase tc) {
 	saxpy_asm((long long int) tc.n, (long long int) tc.actual_Z, (float)tc.A, (long long int) tc.X, (long long int) tc.Y);
 	log_correctness(tc, "assembly");
 }
 
+/**
+ * @brief Logs the correctness data to a CSV file.
+ * 
+ * @param tc The testcase struct containing input data.
+ * @param implementation_type The type of implementation ('C' or 'assembly').
+ */
 void log_correctness(struct testcase tc, char* implementation_type) {
 
 	char filename[50] = "";
@@ -47,7 +63,14 @@ void log_correctness(struct testcase tc, char* implementation_type) {
 	fclose(file);
 }
 
-// https://stackoverflow.com/questions/5248915/execution-time-of-c-program
+/**
+ * @brief Measures the runtime for the C implementation of SAXPY.
+ * 
+ * Methodology came from https://stackoverflow.com/questions/5248915/execution-time-of-c-program
+ * 
+ * @param tc The testcase struct containing input data.
+ * @return The runtime in seconds.
+ */
 double time_implementation_c(struct testcase tc) {
 
 	printf("Measuring the runtime for the C implementation of SAXPY...\n");
@@ -60,6 +83,12 @@ double time_implementation_c(struct testcase tc) {
 
 }
 
+/**
+ * @brief Measures the runtime for the assembly implementation of SAXPY.
+ * 
+ * @param tc The testcase struct containing input data.
+ * @return The runtime in seconds.
+ */
 double time_implementation_assembly(struct testcase tc) {
 
 	printf("Measuring the runtime for the assembly implementation of SAXPY...\n");
@@ -78,6 +107,9 @@ double time_implementation_assembly(struct testcase tc) {
 
 }
 
+/**
+ * @brief Initializes the header for logging average runtime data.
+ */
 void initialize_runtime_header() {
 
 	char filename[50] = "";
@@ -91,6 +123,13 @@ void initialize_runtime_header() {
 
 }
 
+/**
+ * @brief Logs the average runtime data to a CSV file.
+ * 
+ * @param implementation_type The type of implementation ('C' or 'assembly').
+ * @param n The size of the input data.
+ * @param average_runtime The average runtime in milliseconds.
+ */
 void log_runtime(char* implementation_type, int n, double average_runtime) {
 
 	char filename[50] = "";
@@ -101,7 +140,12 @@ void log_runtime(char* implementation_type, int n, double average_runtime) {
 	fclose(file);
 }
 
-
+/**
+ * @brief Displays the first n elements of an array.
+ * 
+ * @param n The number of elements to display.
+ * @param Z The array of floats.
+ */
 void display_first_n(int n, float* Z) {
 	printf("\n");
 	for (int i = 0; i < n; i++) {
