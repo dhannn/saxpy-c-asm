@@ -5,26 +5,35 @@
 #include "saxpy.h"
 #include "utils.h" 
 
-#define TEST_TYPE "release"
 #define RUNS_PER_TESTCASE 30
 #define MAX_TESTCASES 3
 
 int main() {
 
 	struct testcase tc;
-	initialize_testcase(&tc, "testcase_correctness");
-	verify_correctness_assembly(tc);
-	free_testcases(&tc);
+
+	/* -------------------------------------------------------------------------- */
+	/*                          CORRECTNESS VERIFICATION                          */
+	/* -------------------------------------------------------------------------- */
 
 	initialize_testcase(&tc, "testcase_correctness");
 	verify_correctness_c(tc);
 	free_testcases(&tc);
-
 	
+	initialize_testcase(&tc, "testcase_correctness");
+	verify_correctness_assembly(tc);
+	free_testcases(&tc);
+
+	/* -------------------------------------------------------------------------- */
+	/*                           PERFORMANCE EVALUATION                           */
+	/* -------------------------------------------------------------------------- */
+
 	char* testcase_filenames[] = { "testcase_20", "testcase_24", "testcase_28" };
 	int ns[] = { 20, 24, 28 };
 
 	initialize_runtime_header();
+
+	/* ---------------------------- C Implementation ---------------------------- */
 
 	for (int test = 0; test < MAX_TESTCASES; test++) {
 		
@@ -45,6 +54,8 @@ int main() {
 		log_runtime("c", ns[test], average_runtime);
 
 	}
+
+	/* ------------------------- Assembly implementation ------------------------ */
 
 	for (int test = 0; test < MAX_TESTCASES; test++) {
 
