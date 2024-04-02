@@ -42,11 +42,16 @@ the correctness of the two implementation and b) measure the runtime.
 
 ## Generating Test Cases
 
-TODO: Explain that we created a Python script to automate the generation of 
-random values for test cases. Emphasize that we get random bytes and interpret
-it as float (see source code if you want) then save it on a file `testcase_*` 
-which the C program will read for input (both for correctness check and 
-performance)
+We created a Python script to automate the generation of random values for test cases. 
+This script generates random floats by utilizing the random.uniform() function and 
+rounds them to two decimal places. The generated floats are then used to calculate 
+corresponding values for the SAXPY operation (A*X + Y). These values are saved in 
+files named testcase_correctness and testcase_*, which the C program will later read 
+for both correctness checking and performance evaluation.
+
+Specifically, we created test cases where the vector size (denoted by 'n') is raised 
+to the power of 20, 24, and 28.
+
 
 ## Evaluation of Performance
 
