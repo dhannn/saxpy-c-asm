@@ -114,9 +114,20 @@ noted as Release Mode's average runtime of 0.15681 seconds. is less than Debug M
 ![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/e0d601f9-3e0f-457e-9a84-d0ad24b26558)
 
 # Insights
-Overall, it can be observed that in this experiment, Assembly outperforms C. At first glance, this
+Overall, it can be observed that in this experiment, **Assembly outperforms C**. At first glance, this
 may seem confusing since the Assembly source code is significantly longer than that of C's. However,
 it is important to remember the characteristics of Assembly language. As opposed to high-level
 programming languages like C, assembly does not require an intermediary like a compiler. Unlike C, 
 assembly directly represents machine instructions, reducing the overhead of translation, and
 ultimately, resulting in faster runtimes.
+
+On the other hand, **running the program on Release Mode generally results in faster execution 
+times than on Debug Mode** due to the absence of additional checks. In debug mode, the 
+compiler adds extra checks and information to help with debugging, which makes the program 
+slower to run. These checks and information are helpful for finding and fixing bugs 
+during development. However, in release mode, these extras are removed to improve performance, 
+resulting in faster execution of the program. Therefore, while debug mode is useful for debugging, 
+release mode is faster for running the program without these extra checks.
+
+It is important to note that although the differences in average runtime are small here, they 
+would be more noticeable with larger data. This allows us to further appreciate the wonders of assembly.
