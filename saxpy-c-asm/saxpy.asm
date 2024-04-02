@@ -1,7 +1,7 @@
 section .data
 	SHADOW_SPACE_BUFF equ 32
 	some_float dq 761.7
-	FMT db "Z[%d] = %e", 10, 0
+	FMT db "Z[%d] = %.4f", 10, 0
 	SPACING db 10, 0
 
 section .text 

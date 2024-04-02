@@ -137,8 +137,10 @@
     <CustomBuild Include="saxpy.asm">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\NASM\nasm -f win64 saxpy.asm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">c:\NASM\nasm -f win64 saxpy.asm</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">saxpy.obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\NASM\nasm -f win64 saxpy.asm</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">saxpy.obj</Outputs>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>

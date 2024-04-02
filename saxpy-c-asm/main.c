@@ -3,7 +3,8 @@
 #include <time.h>
 #include "test_init.h"
 #include "saxpy.h"
-#include "utils.h"
+#include "utils.h" 
+
 
 #define TEST_TYPE "release"
 #define RUNS_PER_TESTCASE 30

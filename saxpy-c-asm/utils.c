@@ -31,7 +31,7 @@ void log_correctness(struct testcase tc, char* implementation_type) {
 		if (expected - actual <= 0.001 || expected - actual >= -0.001)
 			status = "P";
 
-		fprintf(file, "%.4f,%.4f,%.4f,%.4f,%.4f,%s\n", A, X, Y, expected, actual, status);
+		fprintf(file, "%.2f,%.2f,%.2f,%.4f,%.4f,%s\n", A, X, Y, expected, actual, status);
 	}
 
 	fclose(file);
@@ -102,7 +102,7 @@ double time_implementation_assembly(struct testcase tc) {
 void display_first_n(int n, float* Z) {
 	printf("\n");
 	for (int i = 0; i < n; i++) {
-		printf("Z[%d] = %e\n", i, Z[i]);
+		printf("Z[%d] = %.4f\n", i, Z[i]);
 	}
 	printf("\n");
 }
