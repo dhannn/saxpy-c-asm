@@ -1,13 +1,21 @@
 # Evaluating Performance of Assembly vs. C Programs
 
-TODO: Introduction about the theoretical benefit of assembly vs. higher 
-level programming (enumerate some then focus on performance)
+Assembly language, although generally less practiced than higher level programming 
+languages like C and Java, is quite useful as it allows programmers to have direct
+control over a computer's hardware. This makes efficient use of system resources such 
+as memory and processing power as programmers can choose which parts of the hardware 
+to utilize. Moreover, assembly language programs are generally faster than other programs 
+written in high-level language. 
 
-TODO: Pivot to this short experiment and its objective (compare assembly
-language vs C in terms of runtime)
+This experiment involves writing a kernel that performs the SAXPY (A*X + Y) function in 
+(1) C program and (2) an x86-64 assembly. Using a main C program that calls both versions,
+we aim to compare their runtimes by getting the average of 30 executions each on both
+debug and release mode. From this, a short analysis of each kernel's performance will 
+be derived.
 
-TODO: Introduce the rest of the write-up (the rest of the sections) and
-a brief description for each.
+In the following sections, we will cover how we conducted the experiment, including our 
+methodology, proof of correctness, and a comparison of performance between the assembly 
+and C implementations.
 
 # Contents
 1. [Methodology](#Methodology)
