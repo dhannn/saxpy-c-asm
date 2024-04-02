@@ -3,10 +3,13 @@
 #include <time.h>
 #include "test_init.h"
 #include "saxpy.h"
+#include "utils.h"
 
 extern void saxpy_asm(long long int n, long long int Z, float A, long long int X, long long int Y);
 
-#define TEST_TYPE "release"
+void log_correctness(struct testcase, char*);
+
+#define TEST_TYPE "debug"
 
 /**
  * @brief Verifies the correctness of the C implementation of SAXPY.
