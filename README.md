@@ -86,13 +86,13 @@ of (1) C and assembly program implementations, and (2) Release and Debug mode.
 ## Debug Mode
 The figures below show the average runtimes (in seconds) of each vector size 
 per kernel when executed on debug mode. It can be observed that the assembly 
-language implementation with an average runtime of 0.09122 seconds shows consistently 
-better performance than that of C's average runtime of 0.234043333 seconds.
+language implementation with an average runtime of 0.0912 seconds shows consistently 
+better performance than that of C's average runtime of 0.2340 seconds.
 Moreover, the difference in execution time becomes much more apparent as the vector 
 size increases. For instance, the gap between C and assembly's $2^{20}$ test cases is 
 0.00177 seconds while the gap between C and assembly's $2^{28}$ test cases is 0.405 seconds.<br><br>
-![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/32821f3b-f669-4c1e-b79f-0efcba060ba3)
-![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/bc0011fc-4c30-4867-9211-7ca29dfa3ec2)<br>
+![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/0f85e73e-c161-4bd4-ad5b-8421fd07dc5f)
+![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/5d6f01e0-87f5-450d-b9c7-3ce8cf652821)<br>
 ![image](https://github.com/dhannn/saxpy-c-asm/assets/90260852/7eb98ec0-716a-4996-9193-4d41c9910931)
 
 ## Release Mode
